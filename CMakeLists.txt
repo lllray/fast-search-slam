@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6)
-project(icp_bnb)
+project(fast-search-slam)
 
 SET(CMAKE_BUILD_TYPE Release)
 #IF(CMAKE_COMPILER_IS_GNUCC)

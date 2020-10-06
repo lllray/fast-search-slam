@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>icp_bnb</name>
+  <name>fast-search-slam</name>
   <version>0.0.0</version>
   <description>This is me running through the tutorial</description>
   <maintainer email="852701767@qq.com">ray</maintainer>
