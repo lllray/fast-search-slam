@@ -1,0 +1,166 @@
+map_image_save_dir: /home/ray/my_map/map.png
+icp_map_image_save_dir: /home/ray/my_map/icp_map.png
+map_config_save_dir: /home/ray/my_map/map.yaml
+
+map:
+  frame_id: odom
+
+
+define:
+
+  slam_model_mim: true
+  navigation_model_mim: false
+
+  scan_max_distance: 50.0
+  scan_min_distance: 0.1
+
+  use_voxel_filter: true
+  voxel_filter_size: 0.05
+
+
+
+  match_tree_m: 5
+
+  #match_max_iters: 3
+  #match_angel_max_step: 4 #4
+  #match_dist_max_step: 2  #3
+  #match_angel_max_range: 0.15708 #0.07854 #3.14159/40.0
+  #match_dist_max_range: 0.08 #0.08
+
+  match_max_iters: 3
+  match_angel_max_step: 5 #8
+  match_dist_max_step: 3  #5
+  match_angel_max_range: 0.314 #0.314 #3.14159/10.0
+  match_dist_max_range: 0.3 #0.20
+
+  match_reject_point_max_k: 0.4
+
+  relocation_max_iters: 2
+  relocation_angel_max_step: 25
+  relocation_dist_max_step: 10
+  relocation_angel_max_range: 3.14159
+  relocation_dist_max_range: 1.0
+
+
+  close_loop_max_iters: 2
+  close_loop_angel_max_step: 25
+  close_loop_dist_max_step: 18
+  close_loop_angel_max_range: 3.14159
+  close_loop_dist_max_range: 3.2
+
+  close_loop_transnoise_max: 0.10
+  close_loop_rotnoise_max: 0.07854 #3.14159/40.0
+  close_loop_find_loop_max_distance: 2.0
+  close_loop_find_loop_max_id_diff: 100 #25*40 scan T * 40 s
+  close_loop_debug: false
+
+  close_loop_score_k: 2
+  close_loop_reject_point_k: 2
+
+  submap_max_distance: 3.0
+
+  use_odom: false
+  use_last_as_match_init: false
+  use_move_filter: true
+  move_filter_min_dist: 0.02 #0.02
+  move_filter_min_angel: 0.02 #0.05
+
+  debug: true
+  debug_info: false
+  debug_image: false
+
+  #my dataset 3 ->1 540
+  #my dataset 4 ->2 540
+  #aces_logfile ->3 180
+  #intel_logfile->4 180
+  #FREIBURGINDOOR_logfile->5 360
+  #MITCSAIL_logfile->6 361
+  #MITKILLIAN_logfile->7 180
+  dataset_type: 6
+  scan_size: 361
+
+  #my dataset 3
+  #show_image_resolution: 2
+  #show_image_max_square: 1000
+  #icpmap_wigth: 3000
+  #icpmap_high: 3000
+  #init_x_offset: 0.0
+  #init_y_offset: 0.0
+  #dataset_x_offset: 0.0
+  #dataset_y_offset: 0.0
+  #dataset_theta_offset: 0.0
+
+  #my dataset 4
+  #show_image_resolution: 8
+  #show_image_max_square: 8000
+  #icpmap_wigth: 3000
+  #icpmap_high: 3800
+  #init_x_offset: 10.0
+  #init_y_offset: -10.0
+  #dataset_x_offset: 0.0
+  #dataset_y_offset: 0.0
+  #dataset_theta_offset: 0.0
+
+  #aces_logfile
+  #show_image_resolution: 8
+  #show_image_max_square: 8000
+  #icpmap_wigth: 2500
+  #icpmap_high: 3500
+  #init_x_offset: -20.0
+  #init_y_offset: 0.0
+  #dataset_x_offset: 0.0
+  #dataset_y_offset: 0.0
+  #dataset_theta_offset: 0.0
+
+  #intel_logfile
+  #show_image_resolution: 8
+  #show_image_max_square: 8000
+  #icpmap_wigth: 4000
+  #icpmap_high: 4000
+  #init_x_offset: -10.0
+  #init_y_offset: 0.0
+  #dataset_x_offset: 0.0
+  #dataset_y_offset: 0.0
+  #dataset_theta_offset: 0.0
+
+  #FREIBURGINDOOR
+  #show_image_resolution: 8
+  #show_image_max_square: 8000
+  #icpmap_wigth: 3000
+  #icpmap_high: 5000
+  #init_x_offset: 0.0
+  #init_y_offset: 8.0
+  #dataset_x_offset:  8.291204
+  #dataset_y_offset: -3.034287
+  #dataset_theta_offset: 0.0
+
+  #MITCSAIL_logfile
+  #show_image_resolution: 8
+  #show_image_max_square: 8000
+  icpmap_wigth: 3500 #7000
+  icpmap_high: 3000 #6000
+  init_x_offset: 15.0
+  init_y_offset: -15.0
+  dataset_x_offset: 0.0
+  dataset_y_offset: 0.0
+  dataset_theta_offset: 0.0
+
+  #MITKILLIAN_logfile
+  #show_image_resolution: 2
+  #show_image_max_square: 1000
+  #icpmap_wigth: 10000 #6000 #10000
+  #icpmap_high: 15000 #10000 #15000
+  #init_x_offset: 30 #-20    #30
+  #init_y_offset: 120 #70    #120
+  #dataset_x_offset: 0.0
+  #dataset_y_offset: 0.0
+  #dataset_theta_offset: 0.0
+
+  icpmap_resolution: 0.02
+  icpmap_point_add_range: 10
+  icpmap_show_k: 20
+
+  icpmap_core_point_range: 2
+  icpmap_point_clear_range: 1
+  icpmap_hit_k: 0.6
+  icpmap_bad_k: 2.5

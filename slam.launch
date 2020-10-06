@@ -1,0 +1,12 @@
+<launch>
+  <param name="use_sim_time" value="false"/>
+
+  <node pkg="icp_bnb" type="icp_odometry" name="icp_odometry" output="screen" clear_params="true">
+  <rosparam file="$(find icp_bnb)/config/default.yaml" command="load" />
+						
+  </node>
+
+  <node pkg="rviz" type="rviz" name="rviz" output="screen" 
+  args="-d $(find icp_bnb)/rviz/default.rviz" required="true">
+  </node>
+</launch>

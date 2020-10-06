@@ -1,0 +1,15 @@
+<launch>
+  <param name="use_sim_time" value="true"/>
+
+  <node pkg="icp_bnb" type="icp_odometry" name="icp_odometry" output="screen" clear_params="true">
+  <rosparam file="$(find icp_bnb)/config/default.yaml" command="load" />
+						
+  </node>
+
+  <node pkg="rviz" type="rviz" name="rviz" output="screen" 
+  args="-d $(find icp_bnb)/rviz/default.rviz">
+  </node>
+
+    <!-- ACES_logfile_odom  INTEL_logfile_odom  FREIBURGINDOOR_logfile  MITCSAIL_logfile MITKILLIAN_logfile -->
+  <node pkg="rosbag" type="play" name="rosbag" args="--clock -r 3 $(find icp_bnb)/dataset/INTEL_logfile_odom.bag"/>
+</launch>
