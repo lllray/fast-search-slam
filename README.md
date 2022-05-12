@@ -1,4 +1,4 @@
-本人研究生关于激光SLAM的一部分工作（激光SLAM的论文有人收真的不容易，感谢机器人期刊），有条件的欢迎下载，代码其实完整性不足，之后正式发表可以开源，希望有感兴趣的同学可以一起完善。
+本人研究生关于激光SLAM的一部分工作（激光SLAM的论文有人收真的不容易，感谢机器人期刊），有条件的欢迎下载，希望有感兴趣的同学可以一起完善。
 
 论文下载链接：基于多分辨率搜索与多点云密度匹配的快速ICP-SLAM方法
 https://kns.cnki.net/KCMS/detail/21.1137.TP.20200515.1456.001.html?v=MDYwNzBybFVyckpKRjQ9THp6WmZMRzRITkhNcW81QVpPc1BZdzlNem1SbjZqNTdUM2ZscVdNMENMTDdSN3FkWitab0Zp
